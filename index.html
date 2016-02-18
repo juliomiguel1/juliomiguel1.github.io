@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Displaceimages</title>
+	<meta name="author" content="Gutierrez Maza, Julio Miguel">	
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+	<script type="text/javascript" src="js/displaceimage.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/displaceimage.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+		$(".marco").displaceimage();
+
+	});
+	</script>
+</head>
+<body>
+	<div id="page">
+
+		<header>
+			<div class="izquierdaheader">
+				<h1>Displaceimage.js </h1>
+			</div>
+			<div class="derechaheader">
+				<br><h2><a href="#demo">Demo</a></h2>
+			</div>
+		</header>
+
+		<main>
+
+			<div class="lodoizquierdo">				
+				<h1>Why should I use this plugin?</h1>				
+				<p>&nbsp;&nbsp;&nbsp;Slides can contain images, video.</p>
+				<p>&nbsp;&nbsp;&nbsp;Uses CSS transitions for slide animation.</p>
+				<p>&nbsp;&nbsp;&nbsp;Small file size, fully themed, simple to implement.</p>
+				<p>&nbsp;&nbsp;&nbsp;Browser support: Firefox, Chrome.</p>
+				<p>&nbsp;&nbsp;&nbsp;Unlimited Images.</p>
+			</ul>		
+		</div>
+		<div class="lododerecho">
+
+		</div>
+		<div class="centro">
+			<div>				
+				<h2>Step 1: Link required files</h2>
+				<p>First and most important, the jQuery library needs to be included (no need to download - link directly from Google). Next, download the package from this site and link the "displaceimage" CSS file (for the theme) and the "displaceimage" Javascript file.</p> 
+			</div>
+			<br>
+
+			<div class="codigo">
+				<br>
+				<code data-language="html"><strong>&lt;!-- jQuery library (served from Google) --&gt;</strong><br>
+					&lt;script src=&quot;&#x2F;&#x2F;ajax.googleapis.com&#x2F;ajax&#x2F;libs&#x2F;jquery&#x2F;1.6.2&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;<br><br>
+					<strong>&lt;!-- displaceimage Javascript file --&gt;</strong><br>
+					&lt;script src=&quot; js&#x2F;displaceimage.js&quot;&gt;&lt;&#x2F;script&gt;<br><br>
+					<strong>&lt;!-- displaceimage CSS file --&gt;</strong><br>
+					&lt;link href=&quot; css&#x2F;displaceimage.css&quot; rel=&quot;stylesheet&quot; &#x2F;&gt;<br><br></code>
+
+				</div>
+				<br>
+				<div>				
+					<h2>Step 2: Create HTML markup</h2>
+					<p>Create a <code>&lt;div class="marco" &lt;ul &gt;</code> element, with a <code>&lt;li&gt;</code> for each slide. Slides can contain images, video</p>
+				</div>
+				<br>
+
+				<div class="codigo1">
+					<br>
+					<code data-language="html">
+						&nbsp;&nbsp;&nbsp;&lt;div class=&quot;marco&quot;&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img src=&quot;&#x2F;img&#x2F;1.jpg&quot; &#x2F;&gt;&lt;&#x2F;li&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img src=&quot;&#x2F;img&#x2F;2.jpg&quot; &#x2F;&gt;&lt;&#x2F;li&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img src=&quot;&#x2F;img&#x2F;3.jpg&quot; &#x2F;&gt;&lt;&#x2F;li&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img src=&quot;&#x2F;img&#x2F;4.jpg&quot; &#x2F;&gt;&lt;&#x2F;li&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img src=&quot;&#x2F;img&#x2F;5.jpg&quot; &#x2F;&gt;&lt;&#x2F;li&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;img src=&quot;&#x2F;img&#x2F;6.jpg&quot; &#x2F;&gt;&lt;&#x2F;li&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&#x2F;ul&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;&#x2F;div&gt;<br>
+					</code>
+				</div>		
+				<br>
+				<div>				
+					<h2>Step 3: Call the displaceimage</h2>
+					<p>Call .displaceimage() on <code>&lt;ul class=".marco"&gt;</code>. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!</p> 
+				</div>
+				<br>
+
+				<div class="codigo2">
+					<br>
+					<code data-language="javascript">
+						&nbsp;&nbsp;&nbsp;$(document).ready(function(){<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&#x27;.marco&#x27;).displaceimage();<br>
+						&nbsp;&nbsp;&nbsp;});</code>
+					</div>
+					<br>
+					<br>
+					<div id="demo">				
+						<h2>Demo</h2>
+
+					</div>
+					<br>
+
+					<div class="plugin">
+						<div class="marco">
+							<ul>				
+								<li><img  src="img/1.png" /></li>
+								<li><img  src="img/2.png" /></li>
+								<li><img  src="img/3.png" /></li>
+								<li><img  src="img/4.png" /></li>
+								<li><img  src="img/5.png" /></li>
+								<li><img  src="img/6.png" /></li>
+							</ul>
+						</div>
+
+					</div>		
+				</div>
+			</main> <!-- content -->
+
+			<footer>
+				<div class="izquierdafooter">
+					<p>All Rights Reserved © 2016</p>
+				</div>
+				<div class="derechafooter">
+					<p><a href="https://github.com/juliomiguel1/displaceimages">See it in GitHub</a></p>
+				</div>
+			</footer>
+
+
+
+		</body>
+		</html>
